@@ -16,8 +16,8 @@ logger = logging.getLogger(__name__)
 
 dp = Dispatcher()
 
-MessageIdPair = tuple[int, int]
-message_dates: dict[MessageIdPair, datetime.datetime] = {}
+MessageIdPair = "tuple[int, int]"
+message_dates: "dict[MessageIdPair, datetime.datetime]" = {}
 
 REACTION_SECONDS_THRESHOLD = 10
 BIO_KEYWORD = "@creaitors_bot"
