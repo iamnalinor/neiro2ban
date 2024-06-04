@@ -28,6 +28,11 @@ async def on_startup(bot: Bot):
     await bot.delete_webhook(drop_pending_updates=True)
 
 
+@dp.message(CommandStart(), F.chat.type == ChatType.PRIVATE)
+async def handle_start_command(message: types.Message):
+    await message.answer(r"¯\_(ツ)_/¯")
+
+
 @dp.message(F.chat.type == ChatType.SUPERGROUP)
 async def handle_message(message: types.Message):
     message_dates[(message.chat.id, message.message_id)] = message.date
