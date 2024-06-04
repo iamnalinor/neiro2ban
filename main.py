@@ -5,6 +5,7 @@ import logging
 from aiogram import Bot, Dispatcher, types, F
 from aiogram.enums import ChatType, UpdateType
 from aiogram.exceptions import TelegramAPIError
+from aiogram.filters import CommandStart
 from envparse import env
 
 env.read_envfile(".env")
